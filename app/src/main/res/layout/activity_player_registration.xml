@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#373636"
+    android:orientation="vertical"
+    tools:context=".view.PlayerRegistrationActivity">
+
+    <!-- Header padrão para todo o aplicativo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#485460"
+        android:padding="10dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Go Back"
+            android:onClick="onBackButtonClick"
+        />
+
+        <!-- Título do aplicativo -->
+        <TextView
+            android:id="@+id/txtHeaderText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Munchkin"
+            android:textColor="#f2f1e6"
+            android:textSize="20sp"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="App Title" />
+
+        <ImageView
+            android:id="@+id/btnDeletePlayer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="Reset Players" />
+
+        <ImageView
+            android:id="@+id/btnSaveUpdatePlayer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/ic_check"
+            android:contentDescription="Reset Players" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtPlayerName"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:padding="15dp"
+        android:hint="Player Name:"
+        android:textColorHint="#f2f1e6"
+        android:textColor="#f2f1e6"
+        android:layout_marginTop="20dp"
+        android:inputType="textPersonName" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical"> <!-- Alterado para "vertical" para alinhar os RadioButtons verticalmente -->
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:buttonTint="#f2f1e6"
+            android:drawableStart="@drawable/ic_male"
+            android:text="Male"
+            android:textColor="#f2f1e6" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:buttonTint="#f2f1e6"
+            android:drawableStart="@drawable/ic_female"
+        android:text="Female"
+        android:textColor="#f2f1e6" />
+    </RadioGroup>
+
+</LinearLayout>
